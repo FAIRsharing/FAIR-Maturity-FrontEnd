@@ -6,13 +6,24 @@ let loader = angular.module('appLoader', []);
 loader.filter('URL_last_arg', function() {
     return function (url) {
         let item = url.split('/').slice(-1)[0];
-
         if (item.indexOf('#') > 0){
             return item.split('#').slice(-1)[0]
         }
         return item;
     };
 });
+
+loader.filter('test_of_URL', function() {
+    return function (url) {
+        let item = url.split('/').slice(-1)[0];
+
+        if (item.indexOf('#') > 0){
+            return item.split('#').slice(-1)[0]
+        }
+        return item.replace("FM", "MI");
+    };
+});
+
 
 loader.filter('removeUnderscore', function() {
     return function (str) {
@@ -25,6 +36,15 @@ loader.filter('str_to_int', function() {
         return parseInt(str)
     };
 });
+
+loader.filter('replaceURL', function($location) {
+    return function (str) {
+        let urlArray = str.split('/');
+        let identifier = urlArray[urlArray.length - 1];
+        return $location.absUrl().replace($location.$$path, '') + '/metrics/' + identifier
+    };
+});
+
 
 
 /* *************************************************************************************************** */
