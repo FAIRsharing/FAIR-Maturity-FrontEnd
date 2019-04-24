@@ -2,134 +2,13 @@
 <html lang="en" ng-app="FAIRmetricsApp">
 
 <head>
-    <meta charset="UTF-8">
-    <title>The FAIR Maturity Evaluation Service</title>
-    <link rel="shortcut icon" href="assets/img/favicon.png" type="image/x-icon">
-    <link rel="icon" href="assets/img/favicon.png" type="image/x-icon">
-    <link rel="stylesheet" href="lib/unused/sandstorm.min.css">
-    <link rel="stylesheet" href="app.css">
-    <link rel="stylesheet" href="lib/angular-material.min.css">
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css"
-          integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr"
-          crossorigin="anonymous">
-
-    <script type="text/javascript" src="lib/jquery.js"></script>
-    <script type="text/javascript" src="lib/bootstrap.min.js"></script>
-    <script type="text/javascript" src="lib/Chart.min.js"></script>
-
-    <script type="text/javascript" src="lib/angular.js"></script>
-    <script type="text/javascript" src="lib/angular-route.min.js"></script>
-    <script type="text/javascript" src="lib/angular-aria.min.js"></script>
-    <script type="text/javascript" src="lib/angular-animate.min.js"></script>
-    <script type="text/javascript" src="lib/angular-messages.min.js"></script>
-    <script type="text/javascript" src="lib/angular-material.js"></script>
-    <script type="text/javascript" src="lib/angular-ui-router.min.js"></script>
-    <script type="text/javascript" src="lib/angular-chart.min.js"></script>
-
-    <script type="text/javascript" src="scripts/loader.js"></script>
-    <script type="text/javascript" src="scripts/controllers/configCtrl.js"></script>
-    <script type="text/javascript" src="scripts/controllers/graphCtrl.js"></script>
-    <script type="text/javascript" src="scripts/controllers/requestCtrl.js"></script>
-    <script type="text/javascript" src="scripts/controllers/creatorCtrl.js"></script>
-
-    <script type="text/javascript" src="main.js"></script>
+    <script type="text/javascript">
+        window.location = "https://fairsharing.github.io/FAIR-Maturity-FrontEnd/#!/"
+    </script>
 </head>
 
 
-<body ng-controller="configCtrl as Config">
-
-    <div class="" ng-controller="mainCtrl as searcher">
-        <!-- NAV BAR TOP -->
-        <nav class="navbar navbar-expand-lg fixed-top navbar-dark bg-primary navbar-transparent navbar-dark bg-primary">
-            <img class="siteLogo" src="assets/img/fairmetrics.png">
-            <a class="navbar-brand" href="#/!">FAIR Evaluation Services</a>
-            <button class="navbar-toggler" type="button"
-                    data-toggle="collapse"
-                    data-target="#navbarColor01"
-                    aria-controls="navbarColor01"
-                    aria-expanded="false"
-                    aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-
-            <div class="collapse navbar-collapse" id="navbarColor01">
-                <ul class="navbar-nav mr-auto">
-                    <li class="nav-item">
-                        <a class="nav-link" href="#/!">Home</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#!evaluations">Evaluations</a>
-                    </li>
-
-                    <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="" role="button" aria-haspopup="true" aria-expanded="false">MI Tests</a>
-                        <div class="dropdown-menu" x-placement="bottom-start" style="position: absolute; transform: translate3d(0px, 37px, 0px); top: 0px; left: 0px; will-change: transform;">
-                            <a class="dropdown-item" href="#!metrics">Browse</a>
-                            <a class="dropdown-item" href="#!metric/new">Register</a>
-                        </div>
-                    </li>
-
-                    <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="" role="button" aria-haspopup="true" aria-expanded="false">Collections</a>
-                        <div class="dropdown-menu" x-placement="bottom-start" style="position: absolute; transform: translate3d(0px, 37px, 0px); top: 0px; left: 0px; will-change: transform;">
-                            <a class="dropdown-item" href="#!collections">Browse</a>
-                            <a class="dropdown-item " href="#!collection/new">Register</a>
-
-                            <a class="dropdown-item"
-                               href="#!collections/new/evaluate">
-                                Run test
-                            </a>
-                        </div>
-                    </li>
-                </ul>
-
-                <form class="form-inline my-2 my-lg-0" ng-submit="goToSearches(terms)">
-                    <input class="form-control mr-sm-2"
-                           type="text"
-                           placeholder="Search tests and collections"
-                           ng-model="terms">
-                    <div class="btn btn-secondary my-2 my-sm-0" ng-click="goToSearches(terms)">
-                        <a class="" href="">Search</a>
-                    </div>
-                </form>
-
-            </div>
-        </nav>
-
-        <div class="splash">
-            <div class="container">
-
-                <div class="row">
-                    <div class="col-lg-12">
-                        <h1>FAIR Evaluation Services</h1>
-                        <hr>
-                        <span class="subtitle">Resources and guidelines to assess the FAIRness of digital resources.</span>
-                        <div id="social">
-                        <span>
-                            <iframe id="gh-fork" src="https://ghbtns.com/github-btn.html?user=FAIRMetrics&amp;repo=Metrics&amp;type=fork" style="border: none;" width="53" height="20"></iframe>
-                            <iframe id="gh-star" src="https://ghbtns.com/github-btn.html?user=FAIRMetrics&amp;repo=Metrics&amp;type=watch&amp;count=true" style="border: none;" width="80" height="20"></iframe>
-                            <iframe src="https://ghbtns.com/github-btn.html?user=FAIRMetrics&repo=Metrics&type=watch&count=true&v=2" frameborder="0" scrolling="0" width="120px" height="20px"></iframe>
-                        </span>
-                        </div>
-                    </div>
-                </div>
-
-            </div>
-        </div>
-
-        <!-- MAIN -->
-        <div ng-view></div>
-
-        <!-- FOOTER -->
-        <nav class="footer navbar navbar-expand-lg fixed-bottom navbar-dark bg-primary navbar-transparent navbar-dark bg-primary">
-            This application is a collaboration between the
-            <a style="margin-left:3px; margin-right:3px;" href="http://www.ox.ac.uk/" target="_blank">University of Oxford</a>
-            and La
-            <a style="margin-left:3px;" href="http://www.upm.es/" target="_blank">Universidad Politécnica de Madrid</a>. Licensed under
-            <a style="margin-left:3px;" href="https://github.com/terazus/FAIR-Maturity-FrontEnd/blob/master/LICENSE" target="_blank"> BSD-3 Clause </a>.
-        </nav>
-    </div>
-
+<body>
 </body>
 
 </html>
