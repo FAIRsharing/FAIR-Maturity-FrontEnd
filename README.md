@@ -1,4 +1,4 @@
 # FAIR-Maturity-FrontEnd
 Please use:
-https://github.com/FAIRsharing/FAIR-Maturity-FrontEnd
-https://fairsharing.github.io/FAIR-Maturity-FrontEnd
+https://github.com/FAIRsharing/FAIR-Evaluator-FrontEnd
+https://fairsharing.github.io/FAIR-Evaluator-FrontEnd
